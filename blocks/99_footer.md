@@ -83,6 +83,7 @@
 [gh-mvp--lab]: https://img.shields.io/badge/mvp--lab-lightgrey?style=flat-square&logo=huggingface&logoColor=white
 [gh-HardGravy2]: https://img.shields.io/badge/HardGravy2-lightgrey?style=flat-square&logo=huggingface&logoColor=white
 [gh-Alissonerdx]: https://img.shields.io/badge/Alissonerdx-lightgrey?style=flat-square&logo=huggingface&logoColor=white
+[gh-coolthor]: https://img.shields.io/badge/coolthor-lightgrey?style=flat-square&logo=huggingface&logoColor=white
 
 [ltype-character]: https://img.shields.io/badge/Character-0077cc?style=flat-square
 [ltype-style]: https://img.shields.io/badge/Style-6f42c1?style=flat-square

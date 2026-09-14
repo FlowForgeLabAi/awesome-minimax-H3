@@ -34,6 +34,7 @@ Built from [`llmfan46/Qwen3-VL-32B-Instruct-ultra-uncensored-heretic`](https://h
 | :--- | :---: | :---: | :---: |
 | `qwen3vl_32b_heretic` (conditioning encoder) | ![int8][badge-int8] | 24.55 GB | [![][gh-ethanfel]](https://huggingface.co/ethanfel/Qwen3-VL-32B-Ultra-Heretic-MiniMax-H3-ComfyUI-INT8-ConvRot/resolve/main/qwen3vl_32b_minimax_h3_ultra_uncensored_heretic_int8_convrot.safetensors) |
 | `qwen3vl_32b_heretic` (generation tail 50–63) | ![int8][badge-int8] | 7.09 GB | [![][gh-ethanfel]](https://huggingface.co/ethanfel/Qwen3-VL-32B-Ultra-Heretic-MiniMax-H3-ComfyUI-INT8-ConvRot/resolve/main/qwen3vl_32b_minimax_h3_generation_tail_50_63_int8_convrot.safetensors) |
+| `qwen3vl_32b_heretic` · NVFP4 (coolthor, gated) | ![nvfp4][badge-nvfp4] | 14.61 GB | [![][gh-coolthor]](https://huggingface.co/coolthor/MiniMax-H3-pruned-NVFP4/resolve/main/text_encoders/qwen3vl_32b_heretic_minimax_h3_nvfp4.safetensors) |
 
 *The generation tail is loaded temporarily by the [ComfyUI-MiniMax-H3-Guide](https://github.com/ethanfel/ComfyUI-MiniMax-H3-Guide) node for prompt enhancement, then unloaded. Requires the connected standard MiniMax-H3 CLIP (layers 0–49).*
 
