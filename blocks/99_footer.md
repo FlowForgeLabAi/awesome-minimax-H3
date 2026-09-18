@@ -26,6 +26,7 @@
 [gh-pytraveler]: https://img.shields.io/badge/pytraveler-lightgrey?style=flat-square&logo=huggingface&logoColor=white
 [gh-lihaoyun6]: https://img.shields.io/badge/lihaoyun6-lightgrey?style=flat-square&logo=huggingface&logoColor=white
 [gh-LBH-123-AI]: https://img.shields.io/badge/LBH--123--AI-lightgrey?style=flat-square&logo=huggingface&logoColor=white
+[gh-Asirus]: https://img.shields.io/badge/Asirus-lightgrey?style=flat-square&logo=huggingface&logoColor=white
 [gh-tutututututu]: https://img.shields.io/badge/tutututututu-lightgrey?style=flat-square&logo=huggingface&logoColor=white
 [gh-t8star]: https://img.shields.io/badge/t8star-lightgrey?style=flat-square&logo=huggingface&logoColor=white
 [gh-abakanai]: https://img.shields.io/badge/abakanai-lightgrey?style=flat-square&logo=huggingface&logoColor=white
@@ -84,6 +85,9 @@
 [gh-HardGravy2]: https://img.shields.io/badge/HardGravy2-lightgrey?style=flat-square&logo=huggingface&logoColor=white
 [gh-Alissonerdx]: https://img.shields.io/badge/Alissonerdx-lightgrey?style=flat-square&logo=huggingface&logoColor=white
 [gh-coolthor]: https://img.shields.io/badge/coolthor-lightgrey?style=flat-square&logo=huggingface&logoColor=white
+[gh-Rkss]: https://img.shields.io/badge/Rkss-lightgrey?style=flat-square&logo=huggingface&logoColor=white
+[gh-taxexempt]: https://img.shields.io/badge/taxexempt-lightgrey?style=flat-square&logo=huggingface&logoColor=white
+[gh-UntMods]: https://img.shields.io/badge/UntMods-lightgrey?style=flat-square&logo=huggingface&logoColor=white
 
 [ltype-character]: https://img.shields.io/badge/Character-0077cc?style=flat-square
 [ltype-style]: https://img.shields.io/badge/Style-6f42c1?style=flat-square
@@ -101,6 +105,7 @@
 [badge-fp32]: https://img.shields.io/badge/fp32-6c757d?style=flat-square
 [badge-int8]: https://img.shields.io/badge/int8-17a2b8?style=flat-square
 [badge-int4]: https://img.shields.io/badge/int4-ffc107?style=flat-square
+[badge-w4a8]: https://img.shields.io/badge/w4a8-fe7d37?style=flat-square
 [badge-nvfp4]: https://img.shields.io/badge/nvfp4-6f42c1?style=flat-square
 [badge-Q2_K]: https://img.shields.io/badge/Q2__K-e05d44?style=flat-square
 [badge-Q3_K_M]: https://img.shields.io/badge/Q3__K__M-fe7d37?style=flat-square
