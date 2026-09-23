@@ -88,6 +88,11 @@
 [gh-Rkss]: https://img.shields.io/badge/Rkss-lightgrey?style=flat-square&logo=huggingface&logoColor=white
 [gh-taxexempt]: https://img.shields.io/badge/taxexempt-lightgrey?style=flat-square&logo=huggingface&logoColor=white
 [gh-UntMods]: https://img.shields.io/badge/UntMods-lightgrey?style=flat-square&logo=huggingface&logoColor=white
+[gh-videorebirth]: https://img.shields.io/badge/videorebirth-lightgrey?style=flat-square&logo=huggingface&logoColor=white
+[gh-neph1]: https://img.shields.io/badge/neph1-lightgrey?style=flat-square&logo=huggingface&logoColor=white
+[gh-RunningHubAI]: https://img.shields.io/badge/RunningHubAI-lightgrey?style=flat-square&logo=huggingface&logoColor=white
+[gh-Cseti]: https://img.shields.io/badge/Cseti-lightgrey?style=flat-square&logo=huggingface&logoColor=white
+[gh-Felldude]: https://img.shields.io/badge/Felldude-lightgrey?style=flat-square&logo=huggingface&logoColor=white
 
 [ltype-character]: https://img.shields.io/badge/Character-0077cc?style=flat-square
 [ltype-style]: https://img.shields.io/badge/Style-6f42c1?style=flat-square

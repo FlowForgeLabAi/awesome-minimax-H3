@@ -24,6 +24,14 @@ GGUF quantized text encoder, bundled with the [Abiray/MiniMax-H3-GGUF](https://h
 | `qwen3vl_32b_minimax_h3` | ![int4][badge-int4] | 13.93 GB | [![][gh-Abiray]](https://huggingface.co/Abiray/MiniMax-H3-GGUF/resolve/main/text_encoders/qwen3vl_32b_minimax_h3_int4_convrot.safetensors) |
 | `qwen3vl_32b_minimax_h3` | ![nvfp4][badge-nvfp4] | 25.28 GB | [![][gh-Abiray]](https://huggingface.co/Abiray/MiniMax-H3-GGUF/resolve/main/text_encoders/qwen3vl_32b_minimax_h3_nvfp4_awq.safetensors) |
 
+### ▣ Full-Precision Pruned Encoder (Felldude)
+
+An FP32 build of the pruned H3 text encoder by [Felldude](https://huggingface.co/Felldude/QWEN_32B_Comfy_MinimaxH3_Pruned_FP32) — one 95.9 GB `model.safetensors`. The author's **QP (Quantization Prediction)** method predicts the trailing 16 Matnitsa bits when going BF16 → FP32, which they report improves 40–50% of blocks while never degrading the rest below the BF16 rounding floor (validated on full-FP32-trained models such as T5). For maximum-fidelity conditioning on a large-VRAM box; most setups are better served by the INT8 / INT4 / GGUF encoders above.
+
+| Model Name | Precision | Size | Download |
+| :--- | :---: | :---: | :---: |
+| `qwen3vl_32b_minimax_h3` · pruned | ![fp32][badge-fp32] | 95.9 GB | [![][gh-Felldude]](https://huggingface.co/Felldude/QWEN_32B_Comfy_MinimaxH3_Pruned_FP32/resolve/main/model.safetensors) |
+
 <p id="enc-heretic" align="center">· · · · · · · · · · · · · ·</p>
 
 ### ▣ Qwen3-VL-32B Ultra-Heretic (Uncensored)
@@ -37,4 +45,6 @@ Built from [`llmfan46/Qwen3-VL-32B-Instruct-ultra-uncensored-heretic`](https://h
 | `qwen3vl_32b_heretic` · NVFP4 (coolthor, gated) | ![nvfp4][badge-nvfp4] | 14.61 GB | [![][gh-coolthor]](https://huggingface.co/coolthor/MiniMax-H3-pruned-NVFP4/resolve/main/text_encoders/qwen3vl_32b_heretic_minimax_h3_nvfp4.safetensors) |
 
 *The generation tail is loaded temporarily by the [ComfyUI-MiniMax-H3-Guide](https://github.com/ethanfel/ComfyUI-MiniMax-H3-Guide) node for prompt enhancement, then unloaded. Requires the connected standard MiniMax-H3 CLIP (layers 0–49).*
+
+*A **text-encoder-side** LoRA also circulates for prompt writing: [RunningHubAI's `…qwen3vl32b__prompt_generation_overlay__polaris_r16_plus_heretic_v2`](https://huggingface.co/RunningHubAI/rh-minimax-h3-qwen3vl32b-prompt-generation-overlay-polaris-r16-plus-heretic-v2.safetensors-lora) (261 MB, rank 16) overlays a prompt-generation behavior on the Qwen3-VL-32B encoder, built on the Heretic v2 line — load it on the text encoder, not the DiT.*
 

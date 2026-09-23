@@ -82,3 +82,19 @@ Neural latent-space upscaler for MiniMax H3 video generation by [LBH-123-AI](htt
 | Latent Upscaler v1 | ![fp32][badge-fp32] | 1.38 GB | [![][gh-LBH-123-AI]](https://huggingface.co/LBH-123-AI/Minimax_h3_latent_Upscaler/resolve/main/minimax_h3_latent_upscaler_3d_conv_v1/minimax_h3_latent_upscaler_3d_conv_v1_fp32.pth) |
 | BF16 Conservative v5 | ![bf16][badge-bf16] | 691 MB | [![][gh-Asirus]](https://huggingface.co/Asirus/Minimax-H3-Latent-Upscaler-BF16-MAXQUALITY/resolve/main/minimax_h3_bf16_CONSERVATIVE_v5.safetensors) |
 
+<p id="controlnet" align="center">· · · · · · · · · · · · · ·</p>
+
+### ▣ Fun-ControlNet Union 2.0 (alibaba-pai)
+
+Control branch for MiniMax-H3 from Alibaba PAI's [VideoX-Fun](https://github.com/aigc-apps/VideoX-Fun) line, by [alibaba-pai](https://huggingface.co/alibaba-pai/MiniMax-H3-Fun-Controlnet-Union-2.0). Loaded **on top of** the base H3 transformer — the checkpoint holds only the control branch (`control_proj_in` + 10 control blocks, ≈13.5 GB) and is not a standalone model.
+
+**What 2.0 changes vs v1:** 8 control conditions instead of 5 (adds **Scribble, Layout, Gray** to Canny / Depth / HED / MLSD / Pose), a denser injection schedule (10 control blocks at layers `0, 5, 10, …, 45` instead of 5 at `0, 10, 20, 30, 40`), and a `post_norm` inpaint recipe (holes at mid-gray, following Wan 2.1) instead of `pre_norm`. `control_in_dim = 49` (latent + masked latent + mask) so the same branch does both control and inpainting; `control_apply_audio = false`; guidance-distilled (`guidance_scale = 1.0`).
+
+> ⚠️ **A v1 config against this checkpoint fails silently.** With the old `minimax_h3_control.yaml` (5 blocks) only half the branch is built and `load_state_dict(strict=False)` drops `control_blocks.5~9` as unexpected keys — outputs are wrong with no error. Always use `minimax_h3_control_inpaint_post_norm.yaml`.
+
+| Component | Precision | Size | Download |
+| :--- | :---: | :---: | :--- |
+| ControlNet-Union-2.0 branch | ![fp32][badge-fp32] | 12.6 GB | [![][gh-alibaba-pai]](https://huggingface.co/alibaba-pai/MiniMax-H3-Fun-Controlnet-Union-2.0/resolve/main/MiniMax-H3-Fun-Controlnet-Union-2.0.safetensors) |
+
+*MiniMax H3 Community License Agreement; 8 control conditions plus video inpainting, one checkpoint. V2V control workflows (openpose/canny/depth) in javawock7618's INT8 pack wire this branch in.*
+
